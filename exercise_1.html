@@ -18,20 +18,20 @@
 
             in order.
         */
-        function first() {
-            console.log('a');
-            second();
-            console.log('e');
-        }
-        function second() {
-            console.log('b');
-            third();
-            console.log('d');
-        }
-        function third() {
-            console.log('c');
-        }
-        first();
+        function first() { //2) the function runs...
+            console.log('a'); //3) the first console.log is reached, A
+            second(); //4) then we invoke the second function which sends us to those lines
+            console.log('e'); //13) continuing the first function, the fifth console.log is reached, E
+        } //14) the first function ends, and now all five letters are logged in the correct order 
+        function second() { //5) the function runs...
+            console.log('b'); //6) the second console.log is reached, B
+            third(); //7) then we invoked the third function which sends us to those lines
+            console.log('d'); //11) continuing the second function, the fourth console.log is reached, D
+        } //12) the second function ends, continuing with the first's lines
+        function third() { //8) the function runs...
+            console.log('c'); //9) the third console.log is reached, C
+        } //10) the third function ends, continuing with the second's lines
+        first(); //1) we invoke the first function here sending us up to the first function line
     </script>
 </body>
 </html>

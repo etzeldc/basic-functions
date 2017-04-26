@@ -11,22 +11,22 @@
 			Make it so that all of the tests print "true" (without changing the tests).
 		*/
 
-		function square(a) {
+		function square(a) { //declares function 'square' with placeholder: a
 			// TODO return the square of a
-			return (a * a);
-		}
+			return (a * a); //produces the square of value entered as argument into placeholder
+		} //end function
 
-		function min (a, b) {
+		function min (a, b) { //declares function 'min' with two placeholders
 			// TODO return the minimum of a and b
 			// Hint: you'll need to use "if"
-			if (a < b) {
-				return a;
-			} else if (b < a) {
-				return b;
-			} else {
-				return a || b;
-			}
-		}
+			if (a < b) { //first condition: is a smaller?
+				return a; //if so, pick the value entered into the a argument, or...
+			} else if (b < a) { //second condition: is b smaller?
+				return b; //if so, pick that corresponding value instead, BUT...
+			} else { //what if the'yre equal?!
+				return a; //doesn't matter, return a
+			} //end if/else block  
+		} //end function
 
 		// Test One
 		console.log(5 * 5 === square(5));

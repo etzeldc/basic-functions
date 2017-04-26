@@ -9,21 +9,25 @@
 		var sum = 0;
 		var number = 0;
 
-		function addToAverage(num) {
-			sum = sum + num;
-			number = number + 1;
+		function addToAverage(num) { //declares a function where whatever number value is entered in the placeholder will be run through the code
+			sum = sum + num; //that value is added to the running total for all values entered into the placeholder
+			number = number + 1; //if a value is passed, one is added to the count of how many values have been entered too
 		}
 
-		function getAverage() {
-			return sum / number;
+		function getAverage() { //declares a function that averages the sum and number variable at whatever point it is called/invoked
+			return sum / number; //returns number
 		}
 
 		/*
 			TODO: Using the functions above, compute and print the average of:
 			13, 4, 134, 21, 30
 		*/
-		console.log(getAverage(addToAverage(13), addToAverage(4), addToAverage(134), addToAverage(21), addToAverage(30)));
-		
+		addToAverage(13); //adds 13 to sum and one to the value count
+		addToAverage(4); //adds 4 to sum and one to the value count
+		addToAverage(134); //adds 134 to sum and one to the value count
+		addToAverage(21); //adds 21 to sum and one to the value count
+		addToAverage(30); //adds 30 to sum and one to the value count
+		console.log(getAverage()); //logs the average of the global variables after each of the five values have been passed through
 		/*
 			Optional: Create a function which averages an array of numbers
 			Optional: Create a variadic funciton which averages all of its arguments
